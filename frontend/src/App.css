@@ -1,38 +1,172 @@
-.App {
-  text-align: center;
+
+/* Global */
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html{
+  font-size: 62.5%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a{
+  color: black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+/* Navigation */
+
+.navigation{
+  height: 15vh;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 1rem;
+  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+}
+
+.navigation h1{
+  font-size: 2rem;
+}
+
+.navigation ul li{
+  list-style-type: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.create:hover{
+  color: #1f3ef1;
+}
+
+/* Posts - homepage */
+
+.posts{
+  min-height: 90vh;
+  background: linear-gradient(#1f3ef1, #21c1e9);
+  padding: 4rem 0rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.post{
+  padding: 1.5rem;
+  width: 50%;
+  height: 180px;
+  background-color: rgb(255, 255, 255);
+  border: 0.1rem solid rgb(56, 56, 56);
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+
+.post div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  margin-bottom: 1rem;
+}
+
+.post h3{
+  font-size: 2rem;
+}
+
+.post h4{
+  font-size: 1.2rem;
+}
+
+.post p{
+  font-size: 1.8rem;
+}
+
+.no-posts-container{
+  margin-top: 5rem;
+  height: 100px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.no-posts-container h4{
+  font-size: 2rem;
+}
+
+.no-posts-container button{
+  background-color:  rgb(14, 14, 100);
+  border: 2px solid rgb(231, 230, 230);
+  border-radius: 4px;
+  display: block;
+  padding: 1rem 5rem;
+  cursor: pointer;
   color: white;
+  font-size: 1.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+/* Creating a post */
+
+.create-post-container{
+  min-height: 100vh;
+  padding: 4rem 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.create-post-container h3{
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.create-post-wrapper{
+  width: 50%;
+}
+
+input[type=text] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 20px 0px;
+  border: 2px solid rgb(231, 230, 230);;
+  border-radius: 4px;
+}
+
+textarea{
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 20px 0px;
+  border: 2px solid rgb(231, 230, 230);;
+  border-radius: 4px;
+  height: 200px;
+}
+
+input[type=submit]{
+  background-color:  rgb(14, 14, 100);
+  border: 2px solid rgb(231, 230, 230);
+  border-radius: 4px;
+  display: block;
+  margin: 4rem auto;
+  padding: 1rem;
+  width: 50%;
+  cursor: pointer;
+  color: white;
+  font-size: 2rem;
+}
+
+.invalid-input{
+  font-size: 1.5rem;
+  color: red;
 }
