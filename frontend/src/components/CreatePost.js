@@ -14,7 +14,7 @@ function CreatePost() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
     };
-    fetch('http://127.0.0.1:8787', requestOptions)
+    fetch('https://my-worker.samf23987423.workers.dev', requestOptions)
       .then(response => response.json());
   };
 

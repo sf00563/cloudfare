@@ -12,7 +12,7 @@ function Posts() {
   const [posts, setPosts] = useState([]);
 
   const fetchPosts = async () => {
-    const data = await fetch('http://127.0.0.1:8787');
+    const data = await fetch('https://my-worker.samf23987423.workers.dev');
     const userPosts = await data.json();
     setPosts(userPosts.posts);
   }
