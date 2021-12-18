@@ -14,7 +14,8 @@ function Posts() {
   const fetchPosts = async () => {
     const data = await fetch('https://my-worker.samf23987423.workers.dev');
     const userPosts = await data.json();
-    setPosts(userPosts.posts);
+    console.log(userPosts.userPosts);
+    setPosts(userPosts.userPosts);
   }
 
   return (

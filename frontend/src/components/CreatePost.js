@@ -15,13 +15,15 @@ function CreatePost() {
       body: JSON.stringify(data),
     };
     fetch('https://my-worker.samf23987423.workers.dev', requestOptions)
-      .then(response => response.json());
+      .then(response => response.json())
+      .then(data => setMsg(data.msg));
   };
 
 
   return (
     <div className="create-post-container">
       <h3>Join the conversation...</h3>
+      {isMsg && <h4 className='postjob-msg'>{isMsg}</h4>}
       <div className='create-post-wrapper'>
         <form onSubmit={handleSubmit(onSubmit)}>
           <input type='text' placeholder='Post Title' {...register('postTitle', { required: 'This is required' })} />
